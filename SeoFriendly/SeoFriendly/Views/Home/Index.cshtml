@@ -1,0 +1,22 @@
+﻿@model List<SeoFriendly.Models.Films>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <table style="border-collapse:separate;border-spacing: 2px 5px" width="100%">
+        @foreach (var item2 in Model)
+        {
+            <tr>
+                <td width="13%">
+                    <a class="pull-left" href='@Url.FilmSeoLink(item2)'>
+                        <img class="media-object" src="http://placehold.it/400x200/" alt="">
+                    </a>
+                </td>
+                <td width="72%"><p>@item2.Title</p></td>
+                <td width="5%"></td>
+            </tr>
+
+        }
+    </table>
+</div>
